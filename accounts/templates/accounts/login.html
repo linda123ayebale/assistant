@@ -1,0 +1,87 @@
+{% extends "main.html" %}
+{% load static %}
+
+<title>
+    {% block title %}
+    Login
+    {% endblock title %}
+</title>
+
+
+{% block content %}
+
+<main>
+  <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-6 d-flex flex-column align-items-center justify-content-center">
+          <div class="card mb-3">
+
+            <div class="card-body">
+              <div class="container">
+
+                <div class="pt-4">
+                  <h6 class="card-title text-center pb-0 fs-4">MUK ASSISTANT</h6>
+                </div>
+
+                <div class="d-flex justify-content-center py-4">
+                  <a href="" class="d-flex align-items-center w-auto">
+                    <img style="height: 100px;" src="{% static 'assets/img/go.png' %}" alt="">
+                  </a>
+                </div>
+
+                <div class="pb-2">
+                  <h5 class="card-title text-center pb-0 fs-4">Sign in</h5>
+                </div>
+
+                <form class="row g-3 needs-validation" novalidate>
+
+                  <div class="col-12">
+                    <div class="input-group has-validation">
+                      <input type="email" name="username" style="background-color: rgb(211, 241, 147);" placeholder="Email" class="form-control" id="yourUsername" required>
+                      <div class="invalid-feedback">Please enter your username.</div>
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <label for="yourPassword" class="form-label">Password</label>
+                    <input type="password" name="password" style="background-color: rgb(211, 241, 147);" placeholder="Password" class="form-control" id="yourPassword" required>
+                    <div class="invalid-feedback">Please enter your password!</div>
+                  </div>
+
+                  <div class="col-6">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="remember" value="true" id="rememberMe">
+                      <label style="font-size: 12px;" class="form-check-label" for="rememberMe">Remember me</label>
+                    </div>
+                  </div>
+
+                  <div class="col-6">
+                    <div class="form-check">
+                      <a style="font-size: 10px;" href="{% url 'accounts:forgot' %}">Forgot password?</a>                       
+                    </div>
+                  </div>
+                  
+                  <div class="col-12 pb-5">
+                    <button class="btn w-100" style="background-color: rgb(241, 245, 241); color: blue;" type="submit">Login</button>
+                  </div>                 
+                </form>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="col-12 pt-3">
+                <p style="text-align: center;" class="small mb-0">Don't have account? <a href="{% url 'accounts:register' %}">Sign up</a></p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</main><!-- End #main -->
+{% endblock content %}
+
+
