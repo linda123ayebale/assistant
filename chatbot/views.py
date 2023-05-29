@@ -4,4 +4,4 @@ from django.http import HttpResponse
 # Create your views here.
 
 def homeviews(request):
-    return HttpResponse("Hello, this is chartbot!")
+    return render(request, "chatbot/index.html")
