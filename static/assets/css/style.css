@@ -1058,8 +1058,7 @@ h1, h2, h3, h4, h5, h6 {
 # Footer
 --------------------------------------------------------------*/
 .footer {
-
-  background-color: #9a1414;
+  background-color: #201e1e;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -1074,6 +1073,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   align-items: center;
   height: 100%;
+  width: 100%;
 }
 
 .footer .row {
