@@ -49,12 +49,15 @@
                     </div> -->
 
                     <div class="row p-5">
-                        <div class="col">
-                            <div class="custom-input-group input-group">
-                                <input type="text" class="form-control" placeholder="Where are you..!">
-                                <button type="submit" class="buttonx"><img class="" src="{% static 'assets/img/send.png' %}"></button>
+                        <form method="POST">
+                            <div class="col">
+                                <div class="input-groupx custom-input-group input-group">
+                                    <input type="text" class="form-control" placeholder="Where are you..!" required>
+                                    <button type="submit" class="buttonx"><img class="imagex" src="{% static 'assets/img/send.png' %}"> </button>                                
+                                </div>
                             </div>
-                        </div>
+                        </form>
+                        
                     </div>
                     
                 </div>

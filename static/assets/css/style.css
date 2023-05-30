@@ -43,10 +43,49 @@ h1, h2, h3, h4, h5, h6 {
   flex: 1;
 }
 /* input designd */
+.input-groupx{
+  width: 450px;
+  background-color: #f8f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 200px;
+}
+
+.input-groupx input{
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 200px;
+  padding: 15px;
+  font-size: 35px;
+
+}
+
+.input-groupx .buttonx{
+  background-color: #fff;
+  border-radius: 50px;
+  margin: 0px 8px;
+  padding: 6px;
+  pointer-events: none;
+  opacity: 0;
+  cursor: pointer;
+
+}
+
+.input-groupx .imagex{
+  width: 0px;
+  height: 0px;
+  display: block;
+  margin: 5px 5px 3px 2px;
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.3s;
+
+}
 
 
-
-/* input designd */
+/* endinput designd */
 /*--------------------------------------------------------------
 # Page Title
 --------------------------------------------------------------*/

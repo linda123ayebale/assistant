@@ -59,4 +59,34 @@
     <!-- Template Main JS File -->
     <script src="{% static 'assets/js/main.js' %}"></script>
 </body>
+
+<script>
+    
+    let input = document.querySelector('.input');
+    let buttonx = document.querySelector('.buttonx');
+    let imagex = document.querySelector('.imagex');
+
+    input.oninput = function(){
+
+        if (input.value != ''){
+            imagex.style.width = '35px';
+            imagex.style.height = '35px';
+            imagex.style.opacity = '1';
+            imagex.style.pointerEvents = 'auto';
+
+            buttonx.style.opacity = '1';
+            buttonx.style.pointerEvents = 'auto';
+        }else{
+            imagex.style.width = '0px';
+            imagex.style.height = '0px';
+            imagex.style.opacity = '0';
+            imagex.style.pointerEvents = 'none';
+
+            buttonx.style.opacity = '0';
+            buttonx.style.pointerEvents = 'none';
+        }
+    }
+</script>
+
+
 </html>
