@@ -1,4 +1,5 @@
-{% extends "ar/main.html" %}
+{% extends "base.html" %}
+{% load static %}
 
 <title>
     {% block title %}
@@ -8,6 +9,65 @@
 
 {% block content %}
 
-<h1 style="color: aliceblue; text-align: center;"><u>Augemented Reality home page</u></h1>
-    
+  <!-- ======= Header ======= -->
+  {% include 'header.html' %}
+ <!-- End Header -->
+
+ <section class="section pt-5">
+  <div class="container py-4">
+      <div class="card-body py-4" style="background-color: rgb(112, 175, 154);">
+          <div class="col-12 justify-content-center">
+            <!-- cardbody -->
+              <div class="row"> 
+
+              </div>
+              <!-- endof cardbody -->
+
+              <div class="fixed-bottom pb-5">
+                <div class="container py-4">
+
+                    <div class="row p-5">
+                        <div class="col">
+                            <div class="custom-input-group input-group">
+                                <input type="text" class="form-control" placeholder="Where are you..!">
+                                <div class="input-group-append ml-2">
+                                    <button type="submit" class="btn btn-primary"><i class="bx bxl-telegram"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="row p-5">
+                        <div class="col">
+                            <div class="custom-input-group input-group">
+                                <input type="text" class="form-control" placeholder="Where are you..!">
+                                <div class="input-group-append ml-2">
+                                    <button type="submit" class="btn btn-primary"><i class="ri-camera-line"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <div class="row p-5">
+                        <div class="col">
+                            <div class="custom-input-group input-group">
+                                <input type="text" class="form-control" placeholder="Where are you..!">
+                                <button type="submit" class="buttonx"><img class="" src="{% static 'assets/img/send.png' %}"></button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- Add Font Awesome JS script if not already added -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  
+  <!-- {% include 'footer.html' %} -->
+
 {% endblock content %}
+    

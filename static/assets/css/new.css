@@ -1,0 +1,23 @@
+
+.fixed-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    background-color: #f8f9fa;
+}
+
+.custom-input-group {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.custom-input-group .form-control {
+    width: 70%;
+    margin-right: 5px;
+}
+
+.custom-input-group .input-group-append {
+    width: 30%;
+}
