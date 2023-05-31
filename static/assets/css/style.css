@@ -29,6 +29,36 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Main
 --------------------------------------------------------------*/
+/* new inputs */
+.box .buttonx{
+	background-color: #faf7f7;
+	border-radius: 50px;
+	margin: 0px 8px;
+	padding: 6px;
+	pointer-events: none;
+	opacity: 0;
+	cursor: pointer;
+  /* pointer-envents: none; */
+	opacity: 0;
+  height: 38px;
+  color: #ed3c0d;
+  font-size: 18px;
+
+	cursor: pointer;
+	border: none;
+}
+
+.box .imagex{
+	width: 35px;
+	height: 35px;
+	display: block;
+	margin: 5px 5px 3px 2px;
+	/* pointer-envents: none; */
+	opacity: 0;
+	transition: 0.3s;
+}
+
+/* endof new inputs */
 #main {
   margin-top: 60px;
   padding: 20px 30px;
