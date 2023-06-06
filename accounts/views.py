@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login,logout
+from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 # Create your views here.
 
@@ -19,7 +20,10 @@ def loginViews(request):
 
 
 def registerViews(request):
-    return render(request, 'accounts/register.html')
+    form = UserCreationForm()
+
+    context = {'form':form}
+    return render(request, 'accounts/register.html', context)
 
 
 def forgotViews(request):
