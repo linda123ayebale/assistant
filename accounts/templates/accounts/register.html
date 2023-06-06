@@ -29,7 +29,6 @@
                   </a>
                 </div>
 
-
                 <div class="pb-2">
                   <h5 class="card-title text-center pb-0 fs-4">Create an Account</h5>
                 </div>
@@ -37,7 +36,19 @@
                 <form method="POST" action="" class="row g-3 needs-validation" novalidate> 
                   {% csrf_token %}
 
-                  {{form}}
+                  {% if messages %}
+                    <ul class="messages">
+                        {% for message in messages %}
+                            <p{% if message.tags %} style="font-size: 10px; color: brown;" class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+                        {% endfor %}
+                    </ul>
+                  {% endif %}
+
+                  {% for field in form %}
+
+                    {{field}}
+
+                  {% endfor %}
 
                   <!-- <div class="col-12">
                     <div class="input-group has-validation">
@@ -62,7 +73,7 @@
                     <div class="invalid-feedback">Please enter your password!</div>
                   </div> -->
                   
-                  <div class="col-12 pt-4 pb-5">
+                  <div class="col-12 pt-2 pb-5">
                     <button style="background-color: rgb(241, 245, 241); color: blue;" class="btn btn-primary w-100" type="submit">SUBMIT</button>
                   </div>
                 </form>

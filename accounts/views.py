@@ -22,6 +22,21 @@ def loginViews(request):
 
 def registerViews(request):
     form = CustomUserCreationForm()
+    if request.method == 'POST':
+        form = CustomUserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save(commit=False)
+            user.save()
+            # login in user direct on registration
+            user = authenticate(
+                request, username=user.username, password=request.POST['password1']
+            )
+
+            if user is not None:
+                login(request, user)
+                return redirect('chatbot:home')
+            else:
+                messages.error(request, 'Oops, something went wrong! try again later')
 
     context = {'form':form}
     return render(request, 'accounts/register.html', context)
