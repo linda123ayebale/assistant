@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login,logout
+from django.contrib import messages
 # Create your views here.
 
 def loginViews(request):
@@ -11,15 +12,14 @@ def loginViews(request):
         if user is not None:
             login(request,user)
             return redirect("chatbot:home")
+        else:
+            messages.error(request, 'Oops, Invalid Username or Password.try again')
 
     return render(request, 'accounts/login.html')
 
 
 def registerViews(request):
     return render(request, 'accounts/register.html')
-
-
-
 
 
 def forgotViews(request):

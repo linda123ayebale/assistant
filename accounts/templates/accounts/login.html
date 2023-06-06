@@ -38,6 +38,13 @@
                   {% csrf_token %}
 
                   <div class="col-12">
+                    {% if messages %}
+                      <ul class="messages">
+                          {% for message in messages %}
+                              <p{% if message.tags %} style="font-size: 10px; color: brown;" class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+                          {% endfor %}
+                      </ul>
+                  {% endif %}
                     <div class="input-group has-validation">
                       <input type="text" name="username" style="background-color: rgb(211, 241, 147);" placeholder="Username" class="form-control" id="yourUsername" required>
                       <div class="invalid-feedback">Please enter your username.</div>

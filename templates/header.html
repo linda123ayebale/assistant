@@ -10,31 +10,14 @@
     <nav class="header-nav ms-auto">
       <ul class="d-flex align-items-center">
         <li class="nav-item dropdown pe-3">
-          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+          <li><a class="mr-2" href="{% url 'chatbot:home' %}"><i style="font-size: 20px;" class="ri-home-7-fill"></i></a></li>
+          <li><a href="{% url 'ar:home' %}"><i style="font-size: 20px; color: rgb(241, 110, 110);" class="ri-map-pin-user-fill"></i></a></li>
+          <a class="nav-link nav-profile d-flex align-items-center mr-2 pe-0" href="#" data-bs-toggle="dropdown">
             <i style="font-size: 30px;" class="bi bi-list"></i>
           </a>
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="{% url 'chatbot:home' %}">
-                <i class="ri-ancient-gate-line"></i>
-                <span>Home</span>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="{% url 'ar:home' %}">
-                <i class="ri-eye-line"></i>
-                <span>Ar</span>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
+            
             <li>
               <a class="dropdown-item d-flex align-items-center" href="">
                 <i class="bi bi-person"></i>
