@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login,logout
 # Create your views here.
 
 def loginViews(request):
@@ -24,3 +24,8 @@ def registerViews(request):
 
 def forgotViews(request):
     return render(request, 'accounts/forgot.html')
+
+
+def logoutUser(request):
+    logout(request)
+    return redirect('accounts:login')
