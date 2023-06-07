@@ -29,6 +29,23 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Main
 --------------------------------------------------------------*/
+
+
+
+
+
+.box inputx{
+	width: 100%;
+	border: none;
+	outline: none;
+	border-radius: 6px;
+	padding: 15px;
+	font-size: 35px;
+}
+.input_box{
+	width: 900px;
+}
+
 /* new inputs */
 .box .buttonx{
 	background-color: #faf7f7;
@@ -57,8 +74,15 @@ h1, h2, h3, h4, h5, h6 {
 	opacity: 0;
 	transition: 0.3s;
 }
-
 /* endof new inputs */
+
+
+
+
+
+
+
+
 #main {
   margin-top: 60px;
   padding: 20px 30px;

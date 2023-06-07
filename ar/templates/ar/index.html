@@ -14,7 +14,7 @@
  <!-- End Header -->
 
  <section class="section pt-5">
-  <div class="container py-4">
+  <div class="container-fluid py-4">
       <div class="card-body py-4" style="background-color: rgb(112, 175, 154);">
           <div class="col-12 justify-content-center">
             <!-- cardbody -->
@@ -26,20 +26,21 @@
               <div class="fixed-bottom pb-5">
                 <div class="container py-4">
                     <div class="row p-5">
-                        <form method="" action="">
-                            <div class="col">
-                                <div class="box custom-input-group input-group">
-                                    <input type="text" class="form-control inputx" placeholder="Where would you want to go......!">
-                                    <button type="submit" class="buttonx">
-                                        <i class="ri-send-plane-fill imagex"></i>
-                                    </button>
-
-                                    <div class="input-group-append">
-                                        <a class="btn btn-sm text-white"><img style="width: 30px;" src="{% static 'assets/img/camera.png' %}"> </i></a>
+                        <div class="input_box">
+                            <form method="" action="">
+                                <div class="col-12">
+                                    <div class="box">
+                                        <input type="text" class="form-control inputx" placeholder="Where would you want to go......!">
+                                        <div class="input-group-append">
+                                            <a class="btn btn-sm text-white"><img style="width: 60px;" src="{% static 'assets/img/camera.png' %}"> </i></a>
+                                        </div>
+                                        <button type="submit" class="buttonx">
+                                            <i class="ri-send-plane-fill imagex"></i>
+                                        </button>
                                     </div>
-                                </div>
-                            </div>  
-                        </form>               
+                                </div>  
+                            </form> 
+                        </div>              
                 </div>
             </div>
           </div>
