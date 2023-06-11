@@ -46,13 +46,13 @@
                       </ul>
                   {% endif %}
                     <div class="input-group has-validation">
-                      <input type="text" name="username" style="background-color: rgb(211, 241, 147);" placeholder="Username" class="form-control" id="yourUsername" required>
+                      <input type="text" id="ip1" name="username" style="background-color: rgb(211, 241, 147);" placeholder="Username" class="form-control" id="yourUsername" required>
                       <div class="invalid-feedback">Please enter your username.</div>
                     </div>
                   </div>
 
                   <div class="col-12">
-                    <input type="password" name="password" style="background-color: rgb(211, 241, 147);" placeholder="Password" class="form-control" id="yourPassword" required>
+                    <input type="password" id="ip1" name="password" style="background-color: rgb(211, 241, 147);" placeholder="Password" class="form-control" id="yourPassword" required>
                     <div class="invalid-feedback">Please enter your password!</div>
                   </div>
 
@@ -63,14 +63,14 @@
                     </div>
                   </div>
 
-                  <div class="col-6">
+                  <div class="col-6 mr-2">
                     <div class="form-check">
-                      <a style="font-size: 10px;" href="{% url 'accounts:forgot' %}">Forgot password?</a>                       
+                      <a style="font-size: 12px;" href="{% url 'accounts:forgot' %}">Forgot password?</a>                       
                     </div>
                   </div>
                   
                   <div class="col-12 pb-5">
-                    <button class="btn w-100" style="background-color: rgb(241, 245, 241); color: blue;" type="submit">Login</button>
+                    <button class="btn w-100" id="btn1" style="background-color: rgb(241, 245, 241); color: blue;" type="submit">Login</button>
                   </div>                 
                 </form>
               </div>
