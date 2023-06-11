@@ -8,3 +8,7 @@
     border: 1px solid;
       
 }
+
+.icon {
+    justify-content: flex-start;
+  }
