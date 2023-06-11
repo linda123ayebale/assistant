@@ -36,6 +36,7 @@
   
     <!-- Template Main CSS File -->
     <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/ar.css' %}" rel="stylesheet">
    
 </head>
 <body style="background-color: rgb(4, 197, 85);">
@@ -62,28 +63,28 @@
 
 <script>
     
-    let input = document.querySelector('.inputx');
-    let buttonx = document.querySelector('.buttonx');
-    let imagex = document.querySelector('.imagex');
+    let input = document.querySelector('.input');
+    let button = document.querySelector('.button');
+    let image = document.querySelector('.image');
 
     input.oninput = function(){
 
         if (input.value != ''){
-            imagex.style.width = '35px';
-            imagex.style.height = '35px';
-            imagex.style.opacity = '1';
-            imagex.style.pointerEvents = 'auto';
+            image.style.width = '30px';
+            image.style.height = '30px';
+            image.style.opacity = '1';
+            image.style.pointerEvents = 'auto';
 
-            buttonx.style.opacity = '1';
-            buttonx.style.pointerEvents = 'auto';
+            button.style.opacity = '1';
+            button.style.pointerEvents = 'auto';
         }else{
-            imagex.style.width = '0px';
-            imagex.style.height = '0px';
-            imagex.style.opacity = '0';
-            imagex.style.pointerEvents = 'none';
+            image.style.width = '0px';
+            image.style.height = '0px';
+            image.style.opacity = '0';
+            image.style.pointerEvents = 'none';
 
-            buttonx.style.opacity = '0';
-            buttonx.style.pointerEvents = 'none';
+            button.style.opacity = '0';
+            button.style.pointerEvents = 'none';
         }
     }
 </script>
