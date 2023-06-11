@@ -15,7 +15,7 @@
 }
 
 .box input{
-	width: 1000px;
+	width: 300px;
 	border: none;
 	outline: none;
 	border-radius: 16px 16px 19px;
@@ -48,11 +48,6 @@
 
 	transition: 0.3s;
 }
-
-.input {
-    width: 100%;
-}
-
 
 /*==========================================================================  */
 
