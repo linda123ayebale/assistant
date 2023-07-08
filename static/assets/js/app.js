@@ -48,7 +48,9 @@ function calcRoute() {
 		}else {
 			// delete rotes from the map
 			directionsDisplay.setDirections({ routes: []});
-			
+
+			// center the map in makerere
+			map.setCenter(myLatLng);
 		}
 	})
 
