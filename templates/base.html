@@ -68,22 +68,13 @@
 </body>
 
 <script>
-    
     let input = document.querySelector('.input');
     let button = document.querySelector('.button');
     let image = document.querySelector('.image');
 
-    input.oninput = function(){
-
-        if (input.value != ''){
-            image.style.width = '30px';
-            image.style.height = '30px';
-            image.style.opacity = '1';
-            image.style.pointerEvents = 'auto';
-
-            button.style.opacity = '1';
-            button.style.pointerEvents = 'auto';
-        }else{
+    // Function to update the image and button visibility
+    function updateImageVisibility() {
+        if (input.value !== '') {
             image.style.width = '0px';
             image.style.height = '0px';
             image.style.opacity = '0';
@@ -91,7 +82,21 @@
 
             button.style.opacity = '0';
             button.style.pointerEvents = 'none';
+        } else {
+            image.style.width = '30px';
+            image.style.height = '30px';
+            image.style.opacity = '1';
+            image.style.pointerEvents = 'auto';
+
+            button.style.opacity = '1';
+            button.style.pointerEvents = 'auto';
         }
     }
+
+    // Trigger the function on input change
+    input.addEventListener('input', updateImageVisibility);
+
+    // Initial call to set the image visibility
+    updateImageVisibility();
 </script>
 </html>

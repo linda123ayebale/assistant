@@ -14,30 +14,27 @@
  <!-- End Header -->
 
  <div class="jumbotron">
-  <div class="container-fluid">
-    <h1>LETS TAKE YOU THROUGH</h1>
-    <form class="form-horizontal">
-      <div class="row">
-        <div class="col-xs-6 col-sm-2">
-          <label for="from" class="control-label"><i class="fa fa-dot-circle-o" aria-hidden="true"></i></label>
-        </div>
-        <div class="col-xs-6 col-sm-4">
-          <input type="text" id="from" placeholder="Origin" class="form-control" name="">
-        </div>
-
-        <div class="col-xs-6 col-sm-2">
-          <label for="to" class="control-label"><i style="color: #229840;" class="fas fa-map-marker-alt" aria-hidden="true"></i></label>
-        </div>
-        <div class="col-xs-6 col-sm-4">
-          <input type="text" id="to" placeholder="Destination" class="form-control" name="">
-        </div>
+  <div class="container">
+  <h1>LETS TAKE YOU THROUGH</h1>
+  <form class="form-horizontal">
+    <div class="row">
+      <div class="col-xl-6 col-sm-4 box">
+        <input type="text" id="from" class="input form-control" placeholder="Origin" required>
+        <a class="button"><img src="{% static '/assets/img/camera.jpg' %}" class="image"></a>
       </div>
-    </form>
+      <div class="col-xl-6 col-sm-4 box mt-4">
+        <input type="text" id="to" placeholder="Destination" class="input form-control" name="">
+      </div>
+    </div>
+  </form>
 
-    <div class="col-xs-offset-2 col-xs-10">
-        <button class="btn btn-info btn-lg"><i class="fas fa-directions"></i></button>
+  <div class="row mt-4">
+    <div class="col-12 d-flex justify-content-center align-items-center">
+      <button class="btn btn-info btn-lg" style="width: 500px"><i style="font-size: 30px;" class="fas fa-directions"></i></button>
     </div>
   </div>
+</div>
+
   <!-- ================= -->
 
   <div class="container-fluid">
@@ -51,36 +48,6 @@
       </div>
   </div>
 </div>
-
-
-<!-- <section class="section pt-5">
-    <div class="container-fluid py-4">
-        <div class="card-body py-4" style="background-color: rgb(112, 175, 154);">
-          <div class="col-12 justify-content-center">
-              <div class="row"> 
-                Hello, hy
-              </div>
-
-              <div class="fixed-bottom pb-5">
-                <div class="container py-4">
-                    <div class="row p-5">
-                        <div class="input_box">
-                            <form method="POST" action="" class="#">
-                                <div class="box">
-                                    <input type="text" class="input" placeholder="Ask me something.....!" required>
-                                <button class="button">
-                                    <img src="{% static '/assets/img/send.png' %}" class="image">
-                                </button>
-                                </div>
-                            </form>
-                        </div>         
-                </div>
-            </div>
-          </div>
-        </div>
-      </div>
-  </div>
-</section> -->
 
 <!-- Add Font Awesome JS script if not already added -->
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
