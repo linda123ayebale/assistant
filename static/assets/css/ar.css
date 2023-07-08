@@ -25,6 +25,13 @@ body{
 	font-size: 1em;
 }
 
+#googleMap{
+	width: 80px;
+	height: 400px;
+	margin: 20px auto;
+}
+
+
 
 .input_box{
     width: 100%;
