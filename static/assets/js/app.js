@@ -41,7 +41,14 @@ function calcRoute() {
 		if(status == google.maps.DirectionsStatus.Ok) {
 			// get distance and time
 			const output = document.querySelector('#output');
-			output.innerHTML = "<div class='alert-info'> from: " + document.getElementById("from").value + ".<br />To: " + document.getElementById("to").value + ". <br /> Driving distance <i class='fas fa-road'></i>:" + result.routes[0].legs[0].distance.text + ".<br />Duration <i class='fas fa-hourglass-start'></i> : " + result.routes[0].legs[0].duration.text + ". </div>"; 
+			output.innerHTML = "<div class='alert-info'> from: " + document.getElementById("from").value + ".<br />To: " + document.getElementById("to").value + ". <br /> Driving distance <i class='fas fa-road'></i>:" + result.routes[0].legs[0].distance.text + ".<br />Duration <i class='fas fa-hourglass-start'></i> : " + result.routes[0].legs[0].duration.text + ". </div>";
+
+			 // display route
+			 directionsDisplay.setDirections(result);
+		}else {
+			// delete rotes from the map
+			directionsDisplay.setDirections({ routes: []});
+			
 		}
 	})
 
