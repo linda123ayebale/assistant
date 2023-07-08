@@ -51,8 +51,11 @@ function calcRoute() {
 
 			// center the map in makerere
 			map.setCenter(myLatLng);
+
+			// show error message
+			output.innerHTML = "<div class='alert-danger'><i class='fas fa-exclamation-triangle'></i> could not driving distance. </div>";
 		}
-	})
+	});
 
 }
 
