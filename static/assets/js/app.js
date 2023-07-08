@@ -38,7 +38,7 @@ function calcRoute() {
 
 	// PASS THE REQUEST TO THE ROUTE METHOD
 	directionsService.route(request, (result, status) => {
-		if(status == google.maps.DirectionsStatus.Ok) {
+		if(status == google.maps.DirectionsStatus.OK) {
 			// get distance and time
 			const output = document.querySelector('#output');
 			output.innerHTML = "<div class='alert-info'> from: " + document.getElementById("from").value + ".<br />To: " + document.getElementById("to").value + ". <br /> Driving distance <i class='fas fa-road'></i>:" + result.routes[0].legs[0].distance.text + ".<br />Duration <i class='fas fa-hourglass-start'></i> : " + result.routes[0].legs[0].duration.text + ". </div>";
@@ -58,6 +58,18 @@ function calcRoute() {
 	});
 
 }
+
+// setting auto complete
+
+var options = {
+	types: ['(cities)']
+}
+
+var input1 = document.getElementById("from");
+var autocomplete1 = new google.maps.places.Autocomplete(input1, options)
+
+var input2 = document.getElementById("to");
+var autocomplete2 = new google.maps.places.Autocomplete(input2, options)
 
 
 
