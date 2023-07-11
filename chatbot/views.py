@@ -4,11 +4,8 @@ import openai
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 
-
-openai_api_key ='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'
+openai_api_key =''
 openai_api_key=openai_api_key
-
-# Create your views here.
 
 #Function that sends a request to openai api with our message
 # and then get a response from api
@@ -29,13 +26,11 @@ def ask_openai(message):
    
     answer= response['choices'][0]['message']['content']
     return(answer)
-    # =====================================================================
-
-
 @login_required(login_url='accounts:login')
-def homeviews(request):
+def chatapp(request):
     if request.method == 'POST':
         message = request.POST.get('message')
         response =ask_openai(message)
         return JsonResponse({'message': message,'response': response})
-    return render(request, "chatbot/index.html")
+    return render(request, 'chatbot/chat.html')
+
