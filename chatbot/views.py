@@ -4,8 +4,14 @@ import openai
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 
-openai_api_key =''
-openai_api_key=openai_api_key
+from dotenv import load_dotenv
+import os
+
+def configure():
+    load_dotenv()
+
+openai_api_key ='os.getenv()'
+openai_api_key=configure()
 
 #Function that sends a request to openai api with our message
 # and then get a response from api
