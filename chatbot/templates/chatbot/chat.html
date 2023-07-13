@@ -92,7 +92,7 @@
 
     messageInput.value = '';
 
-    fetch('chatbot:home', {
+    fetch('/chatbot/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: new URLSearchParams({
