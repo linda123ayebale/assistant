@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load static %}
+
+<title>
+    {% block title %}
+    Asking help
+    {% endblock title %}
+</title>
+
+ {% block content %}
+
+  <!-- ======= Header ======= -->
+  {% include 'header.html' %}
+ <!-- end of block --><br><br><br>
+
+<div style="background-image: url('{% static 'assets/img/background.jpg' %}');">
+  <div class="profile-area">
+     <div class="container">
+       <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="img2"><img src="{% static 'assets/img/go.png' %}" alt=""> </div>
+              <div class="main-text">
+              <h2>Chat Bot</h2>
+              <p>the descrition od the whole thing goes here withb not eve a sing doubt aobiut whats going on ovt the same issued which the fools where talking about. hopw you really get the point claeat and rght bescause it really next to impossible regards this issue. jus know that kabraza</p>
+            </div>        
+          </div>
+         </div>
+
+         <div class="col-md-6">
+          <div class="card">
+            <div class="img2"><img src="{% static 'assets/img/go.png' %}" alt=""> </div>
+              <div class="main-text">
+              <h2>Chat Bot</h2>
+              <p>the descrition od the whole thing goes here withb not eve a sing doubt aobiut whats going on ovt the same issued which the fools where talking about. hopw you really get the point claeat and rght bescause it really next to impossible regards this issue. jus know that kabraza</p>
+            </div>        
+          </div>
+         </div>
+      </div>
+     </div>
+   </div>
+
+   <!-- Add Font Awesome JS script if not already added -->
+</div>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  
+  <!-- {% include 'footer.html' %} -->
+
+ {% endblock content %}

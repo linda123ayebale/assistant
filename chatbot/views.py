@@ -40,3 +40,9 @@ def chatapp(request):
         return JsonResponse({'message': message,'response': response})
     return render(request, 'chatbot/chat.html')
 
+
+@login_required(login_url='accounts:login')
+def landPage(request):
+    
+    return render(request, 'chatbot/index.html')
+

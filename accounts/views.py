@@ -13,7 +13,7 @@ def loginViews(request):
 
         if user is not None:
             login(request,user)
-            return redirect("chatbot:home")
+            return redirect("chatbot:landing")
         else:
             messages.error(request, 'Oops, Invalid Username or Password.try again')
 
